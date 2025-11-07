@@ -2,8 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, MessageCircle, Battery, Zap, Users, Gauge } from "lucide-react";
-import piaggioDetail from "@/assets/piaggio-detail.jpg";
-import citylifeDetail from "@/assets/citylife-detail.jpg";
+import piaggioDetail from "@/assets/piaggio-logo.png";
+import citylifeDetail from "@/assets/citylife-logo.png";
 
 const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();

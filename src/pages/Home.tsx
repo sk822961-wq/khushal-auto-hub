@@ -3,8 +3,8 @@ import { Phone, MessageCircle, Shield, Wrench, Banknote, MapPin, CheckCircle } f
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/hero-erickshaw.jpg";
-import piaggioImage from "@/assets/piaggio-banner.jpg";
-import citylifeImage from "@/assets/citylife-banner.jpg";
+import piaggioImage from "@/assets/piaggio-logo.png";
+import citylifeImage from "@/assets/citylife-logo.png";
 const Home = () => {
   const features = [{
     icon: Shield,
@@ -71,17 +71,23 @@ const Home = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             <Link to="/products/piaggio" className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="aspect-[3/2] overflow-hidden">
-                
+              <div className="aspect-[3/2] overflow-hidden bg-background flex items-center justify-center p-8">
+                <img 
+                  src={piaggioImage} 
+                  alt="Piaggio electric auto rickshaw logo" 
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              
             </Link>
 
             <Link to="/products/citylife" className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="aspect-[3/2] overflow-hidden">
-                
+              <div className="aspect-[3/2] overflow-hidden bg-background flex items-center justify-center p-8">
+                <img 
+                  src={citylifeImage} 
+                  alt="Citylife electric auto rickshaw logo" 
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              
             </Link>
           </div>
         </div>

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import piaggioImage from "@/assets/piaggio-banner.jpg";
-import citylifeImage from "@/assets/citylife-banner.jpg";
+import piaggioImage from "@/assets/piaggio-logo.png";
+import citylifeImage from "@/assets/citylife-logo.png";
 
 const Products = () => {
   const products = [
