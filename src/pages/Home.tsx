@@ -5,43 +5,30 @@ import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/hero-erickshaw.jpg";
 import piaggioImage from "@/assets/piaggio-banner.jpg";
 import citylifeImage from "@/assets/citylife-banner.jpg";
-
 const Home = () => {
-  const features = [
-    {
-      icon: Shield,
-      title: "5-Year Service Warranty",
-      description: "Comprehensive warranty coverage for peace of mind"
-    },
-    {
-      icon: Wrench,
-      title: "Free First Service",
-      description: "Complimentary first service on all vehicles"
-    },
-    {
-      icon: Banknote,
-      title: "On-Spot Finance",
-      description: "Easy financing options available instantly"
-    },
-    {
-      icon: MapPin,
-      title: "Free Test Drive",
-      description: "Available in Varanasi, Chandauli & Mirzapur"
-    }
-  ];
-
+  const features = [{
+    icon: Shield,
+    title: "5-Year Service Warranty",
+    description: "Comprehensive warranty coverage for peace of mind"
+  }, {
+    icon: Wrench,
+    title: "Free First Service",
+    description: "Complimentary first service on all vehicles"
+  }, {
+    icon: Banknote,
+    title: "On-Spot Finance",
+    description: "Easy financing options available instantly"
+  }, {
+    icon: MapPin,
+    title: "Free Test Drive",
+    description: "Available in Varanasi, Chandauli & Mirzapur"
+  }];
   const serviceAreas = ["Varanasi", "Chandauli", "Mirzapur"];
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[600px] md:h-[700px] overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Electric Auto Rickshaw on road in Varanasi"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Electric Auto Rickshaw on road in Varanasi" className="w-full h-full object-cover" />
           <div className="absolute inset-0 gradient-hero" />
         </div>
         <div className="relative container mx-auto px-4 h-full flex items-center">
@@ -83,42 +70,18 @@ const Home = () => {
             <p className="text-lg text-muted-foreground">Choose from our authorized dealer brands</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            <Link
-              to="/products/piaggio"
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+            <Link to="/products/piaggio" className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-[3/2] overflow-hidden">
-                <img
-                  src={piaggioImage}
-                  alt="Piaggio Ape electric auto rickshaw"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent flex items-end p-6">
-                <div className="text-background">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">PIAGGIO</h3>
-                  <p className="text-lg opacity-90">Reliability Redefined</p>
-                </div>
-              </div>
+              
             </Link>
 
-            <Link
-              to="/products/citylife"
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+            <Link to="/products/citylife" className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-[3/2] overflow-hidden">
-                <img
-                  src={citylifeImage}
-                  alt="Citylife electric auto rickshaw"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent flex items-end p-6">
-                <div className="text-background">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">CITYLIFE</h3>
-                  <p className="text-lg opacity-90">Style and Comfort</p>
-                </div>
-              </div>
+              
             </Link>
           </div>
         </div>
@@ -132,15 +95,13 @@ const Home = () => {
             <p className="text-lg text-muted-foreground">Your trusted partner for electric mobility solutions</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+            {features.map((feature, index) => <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -150,12 +111,10 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">We Serve Across</h2>
           <div className="flex flex-wrap justify-center gap-8">
-            {serviceAreas.map((area, index) => (
-              <div key={index} className="flex items-center space-x-2">
+            {serviceAreas.map((area, index) => <div key={index} className="flex items-center space-x-2">
                 <MapPin className="w-6 h-6" />
                 <span className="text-xl font-semibold">{area}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -188,8 +147,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
